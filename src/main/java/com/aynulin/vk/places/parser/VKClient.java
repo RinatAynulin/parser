@@ -18,8 +18,8 @@ public class VKClient {
     public VKClient() {
         TransportClient transportClient = HttpTransportClient.getInstance();
         this.vk = new VkApiClient(transportClient, new Gson(), 5);
-        this.userActor = new UserActor(36430907, "accessToken");
-        this.serviceActor = new ServiceActor(5691776, "accessToken");
+        this.userActor = new UserActor(userId, "accessToken"); // fixme
+        this.serviceActor = new ServiceActor(appId, "accessToken"); // fixme
     }
 
 

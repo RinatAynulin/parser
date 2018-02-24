@@ -41,7 +41,7 @@ public class Parser {
         Gson gson = new Gson();
         String currentString;
         while ((currentString = reader.readLine()) != null) {
-            Thread.sleep(300);
+            Thread.sleep(300); // 3 requests per second
             PlaceFull placeFull = gson.fromJson(currentString, PlaceFull.class);
             System.out.println("processing: " + placeFull.getId());
             StringBuffer sb = new StringBuffer("");
